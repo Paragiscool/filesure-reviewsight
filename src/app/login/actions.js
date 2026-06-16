@@ -13,3 +13,9 @@ export async function loginWithGitHub() {
     redirectTo: "/dashboard",
   });
 }
+
+export async function loginWithDemo() {
+  await signIn("credentials", {
+    redirectTo: "/dashboard",
+  });
+}

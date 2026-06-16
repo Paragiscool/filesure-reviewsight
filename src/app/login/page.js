@@ -1,5 +1,5 @@
-import { loginWithGoogle, loginWithGitHub } from "./actions";
-import { Globe, Key } from "lucide-react";
+import { loginWithGoogle, loginWithGitHub, loginWithDemo } from "./actions";
+import { Globe, Key, UserCircle } from "lucide-react";
 
 export default function LoginPage() {
   return (
@@ -22,6 +22,24 @@ export default function LoginPage() {
             <button className="w-full flex items-center justify-center gap-3 rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-800 transition-all dark:bg-white dark:text-slate-900 dark:hover:bg-gray-200">
               <Key size={18} />
               Continue with GitHub
+            </button>
+          </form>
+          
+          <div className="pt-2 pb-2">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t border-gray-300 dark:border-slate-700" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-white/70 dark:bg-slate-900 px-2 text-gray-500">Or bypass for demo</span>
+              </div>
+            </div>
+          </div>
+
+          <form action={loginWithDemo}>
+            <button className="w-full flex items-center justify-center gap-3 rounded-xl bg-reviewsight-600 text-white py-3 hover:bg-reviewsight-700 transition-all font-medium shadow-md">
+              <UserCircle size={18} />
+              Demo Login (Admin)
             </button>
           </form>
         </div>
