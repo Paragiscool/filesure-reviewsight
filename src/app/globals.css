@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@variant dark (&:is(.dark *));
+
+@theme {
+  --color-reviewsight-50: #f5f7ff;
+  --color-reviewsight-100: #e8ecff;
+  --color-reviewsight-200: #d3dcff;
+  --color-reviewsight-300: #b2c1ff;
+  --color-reviewsight-400: #8a9cff;
+  --color-reviewsight-500: #6677ff;
+  --color-reviewsight-600: #4f5dff;
+  --color-reviewsight-700: #3d47e6;
+  --color-reviewsight-800: #3239ba;
+  --color-reviewsight-900: #2d348f;
+
+  --color-surface: #111827;
+  --color-surface-light: #1f2937;
+  --color-surface-dark: #0f172a;
+
+  --color-darksurface-50: #1e293b;
+  --color-darksurface-100: #172033;
+  --color-darksurface-200: #131c2f;
+  --color-darksurface-300: #0f172a;
+  --color-darksurface-400: #0b1220;
+  --color-darksurface-500: #080e19;
+  
+  --font-sans: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply antialiased bg-gray-100 text-gray-800;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
