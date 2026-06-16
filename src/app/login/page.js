@@ -1,5 +1,5 @@
 import { loginWithGoogle, loginWithGitHub } from "./actions";
-import { Chrome, Github } from "lucide-react";
+import { Globe, Key } from "lucide-react";
 
 export default function LoginPage() {
   return (
@@ -14,13 +14,13 @@ export default function LoginPage() {
         <div className="mt-8 space-y-3">
           <form action={loginWithGoogle}>
             <button className="w-full flex items-center justify-center gap-3 rounded-xl bg-white dark:bg-slate-800 border dark:border-slate-700 py-3 hover:shadow-md transition-all text-gray-900 dark:text-white">
-              <Chrome size={18} />
+              <Globe size={18} />
               Continue with Google
             </button>
           </form>
           <form action={loginWithGitHub}>
             <button className="w-full flex items-center justify-center gap-3 rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-800 transition-all dark:bg-white dark:text-slate-900 dark:hover:bg-gray-200">
-              <Github size={18} />
+              <Key size={18} />
               Continue with GitHub
             </button>
           </form>
